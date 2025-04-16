@@ -1,6 +1,7 @@
 package com.shaber.movieticketkotlin.vo
 
 data class UserVO(
-    val accountUser: String,
-    val accountPwd: String
+    val accountUsername: String? = null,
+    val accountPwd: String,
+    val accountPhone: String? = null
 )

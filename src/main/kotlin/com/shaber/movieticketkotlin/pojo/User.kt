@@ -6,9 +6,9 @@ import java.math.BigDecimal
 data class User (
     var uid: String,
     var uname: String,
-    var upwd:String,
-    var umoney:BigDecimal = BigDecimal(0),
-    var uphone:String
+    var upwd: String,
+    var umoney: BigDecimal,
+    var uphone: String
 ) {
     fun userToUserDto(): UserDto {
         return UserDto(

@@ -17,6 +17,10 @@ import org.springframework.web.bind.annotation.RestController
 class UserController(@Autowired private val userService: UserService) {
 
     @PostMapping("/login")
-    fun usrLogin(@RequestBody userVO: UserVO):RV<UserDto> =
-        userService.userLogin(userVO.accountUser, userVO.accountPwd)
+    fun userLogin(@RequestBody userVO: UserVO):RV<UserDto> =
+        userService.userLogin(userVO)
+
+    @PostMapping("/register")
+    fun userRegister(@RequestBody userVO: UserVO):RV<UserDto> =
+        userService.userRegister(userVO)
 }
